@@ -1,0 +1,173 @@
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 6;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: 16px;
+
+  @include on-tablet {
+    --columns: 12;
+  }
+
+  @include on-desktop {
+    --columns: 8;
+    column-gap: 60px;
+  }
+}
+
+@mixin container {
+  max-width: 1280px;
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 60px;
+  }
+
+  @include on-desktop {
+    margin: 0;
+    margin-inline: auto;
+    padding-inline: 100px;
+  }
+}
+
+@mixin bottom-bar {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: $color-bottom-bar;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-radius: 2px;
+    transition: width $animation-rule $animation-timing;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+@mixin title-1 {
+  font-family: IBMPlexMono, monospace;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @include on-tablet {
+    font-size: 48px;
+  }
+}
+
+@mixin title-2 {
+  font-family: IBMPlexMono, monospace;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @include on-tablet {
+    font-size: 44px;
+  }
+}
+
+@mixin title-3 {
+  font-family: IBMPlexMono, monospace;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+
+  @include on-tablet {
+    font-size: 24px;
+  }
+}
+
+@mixin title-meta {
+  font-family: IBMPlexMono, monospace;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin text-meta {
+  font-family: IBMPlexMono, monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin text-technology {
+  font-family: IBMPlexMono, monospace;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin text-normal {
+  font-family: IBMPlexMono, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin text-nav {
+  @include bottom-bar;
+
+  font-family: IBMPlexMono, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: normal;
+  text-decoration: none;
+  transition: color $animation-timing $animation-rule;
+}
+
+@mixin text-logo {
+  font-family: IBMPlexMono, monospace;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+}
+
+@mixin button {
+  @include bottom-bar;
+
+  font-family: IBMPlexMono, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: normal;
+  text-decoration: none;
+  transition: all $animation-timing $animation-rule;
+  color: $color-link;
+}
+
+@mixin info-box {
+  padding: 36px;
+  backdrop-filter: blur(7px);
+  border: 2px solid $color-border;
+  border-radius: 20px;
+  background-color: $color-background-accent;
+}

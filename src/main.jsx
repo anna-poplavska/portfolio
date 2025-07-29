@@ -1,9 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import App from "./App.jsx";
 import { LangProvider } from "./context/LangContext.jsx";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import { HomePage } from "./components/pages/HomePage";
+import { ProjectPage } from "./components/pages/ProjectPage";
+import { NotFoundPage } from "./components/pages/NotFoundPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,6 +18,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="project">
               <Route path=":projectId" element={<ProjectPage />} />
             </Route>
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Router>

@@ -1,0 +1,81 @@
+{
+  "navigation": [
+    {
+      "title": "#home",
+      "path": "#home"
+    },
+    {
+      "title": "#about",
+      "path": "#about"
+    },
+    {
+      "title": "#projects",
+      "path": "#projects"
+    },
+    {
+      "title": "#contact",
+      "path": "#contact"
+    }
+  ],
+  "cv": {
+    "button": "download cv",
+    "path": "cv/cv-anna-poplavska-en.pdf"
+  },
+  "presentation": {
+    "title": "Hi! My name is Anna.",
+    "description": "I am a passionate web developer based in Strasbourg. I love building modern, responsive, and user-focused web applications."
+  },
+  "stack": {
+    "title": "About me",
+    "description": [
+      "Currently open to job offers.",
+      "I graduated with a Master’s degree in Computer Science from the National Aviation University in Kyiv (2023).",
+      "During my studies, I explored object-oriented programming, software architecture, algorithm design, and database systems — including design, management, and administration."
+    ],
+    "tech": [
+      "HTML5",
+      "CSS3 (Sass)",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "SQL",
+      "React.js",
+      "Redux",
+      "Node.js",
+      "Version control",
+      "Git",
+      "GitHub",
+      "API Rest",
+      "Front-end development",
+      "Responsive web design",
+      "Algorithms"
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "year": "Year",
+    "client": "Client",
+    "repo": "Open repo",
+    "website": "Open project",
+    "list": [
+      {
+        "id": "game-2048",
+        "title": "2048 game clone",
+        "year": "2025",
+        "client": "Personal project",
+        "repo": "https://github.com/anna-poplavska/js_2048_game",
+        "website": "https://anna-poplavska.github.io/js_2048_game/",
+        "description": "This is a full clone of the original 2048 game, built from scratch using JavaScript. I implemented the entire game logic: tile movements, number merging, scoring system, and game-over detection. The game is controlled via keyboard inputs. This project allowed me to improve my skills in DOM manipulation, event handling, and game algorithm logic."
+      },
+      {
+        "id": "product-store",
+        "title": "Online tech store",
+        "year": "2025",
+        "client": "Personal project",
+        "repo": "https://github.com/anna-poplavska/react_phone-catalog",
+        "website": "https://anna-poplavska.github.io/react_phone-catalog/",
+        "description": "This is the front-end of a commercial site built with React and TypeScript. It includes a dynamic product catalog, filtering, a favorites system, a shopping cart, search functionality, pagination, and responsive layout. I also integrated external APIs to fetch product data. This project helped me improve my skills in component-based architecture, state management, and API interaction."
+      }
+    ]
+  }
+}

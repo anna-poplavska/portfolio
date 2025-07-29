@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "title": "À propos",
+      "path": "#about"
+    },
+    {
+      "title": "Projets",
+      "path": "#projects"
+    },
+    {
+      "title": "Contact",
+      "path": "#contact"
+    }
+  ]
+}

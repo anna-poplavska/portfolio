@@ -1,0 +1,74 @@
+@import "../../../styles/main.scss";
+
+.top {
+  min-height: calc(100vh - $min-height-header-footer);
+
+  display: flex;
+  align-items: center;
+
+  &__container {
+    @include container;
+    @include page-grid;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    &--box {
+      justify-self: center;
+      grid-column: span 3;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      align-self: center;
+      width: 300px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 2px solid $color-text;
+      overflow: hidden;
+    }
+  }
+
+  &__info {
+    @include info-box;
+
+    grid-column: span 5;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      background: url('images/icons/icon-workplace.png') no-repeat;
+      background-size: 100px 100px;
+      height: 100px;
+      width: 100px;
+      right: 20px;
+      top: -88px;
+    }
+
+    &--title {
+      @include title-1;
+
+      margin: 0;
+    }
+
+    &--text {
+      @include text-normal;
+
+      margin: 0;
+    }
+
+    &--link {
+      @include button;
+
+      width: fit-content;
+    }
+  }
+}

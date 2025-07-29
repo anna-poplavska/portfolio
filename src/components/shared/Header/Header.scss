@@ -1,0 +1,63 @@
+@import "../../../styles/main.scss";
+
+.header {
+  box-sizing: border-box;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  margin: 0;
+  padding: 0 60px;
+  min-height: $min-height-header-footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $color-border;
+  background-color: $color-background-accent;
+  backdrop-filter: blur(10px);
+
+  &__logo {
+    @include text-logo;
+
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    color: $color-text;
+    text-decoration: none;
+    transition: color $animation-timing $animation-rule;
+
+    &--image {
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin: 0;
+
+    list-style: none;
+
+    &--item {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--link {
+      @include text-nav;
+
+      display: block;
+
+      color: $color-nav;
+    }
+
+    &--lang {
+      @include text-nav;
+
+      color: $color-link;
+    }
+  }
+}

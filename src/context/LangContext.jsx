@@ -1,10 +1,15 @@
 import { createContext, useEffect, useState } from "react";
-import translations from './language/translations.json';
+import enTranslation from "../data/enTranslations.json";
+import frTranslation from "../data/frTranslation.json";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const LangContext = createContext();
 
 export const LangProvider = ({ children }) => {
+  const translations = {
+    en: enTranslation,
+    fr: frTranslation,
+  };
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
@@ -18,6 +23,7 @@ export const LangProvider = ({ children }) => {
   }, []);
 
   const changeLang = (newLang) => {
+    console.log(lang, newLang);
     setLang(newLang);
   };
 

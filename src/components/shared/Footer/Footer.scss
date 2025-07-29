@@ -1,0 +1,57 @@
+@import "../../../styles/main.scss";
+
+.footer {
+  box-sizing: border-box;
+  z-index: 10;
+  margin: 0;
+  padding: 0 60px;
+  min-height: $min-height-header-footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color-border;
+  background-color: $color-background-accent;
+  backdrop-filter: blur(20px);
+
+  &__license {
+    @include text-nav;
+  }
+
+  &__nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: center;
+    margin: 0;
+
+    list-style: none;
+
+    &--item {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--link {
+      @include text-nav;
+
+      display: block;
+      color: $color-nav;
+
+      &:hover {
+        color: $color-nav-hover;
+      }
+    }
+
+    &--mail {
+      @include text-nav;
+
+      display: block;
+      color: $color-link;
+
+      &:hover {
+        color: $color-link-hover;
+      }
+    }
+  }
+}

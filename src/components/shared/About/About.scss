@@ -1,0 +1,84 @@
+@import "../../../styles/main.scss";
+
+.about {
+  //   min-height: calc(100vh - $min-height-header-footer);
+  @include container;
+
+  min-height: 100vh;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    @include info-box;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      background: url('images/icons/icon-cat-computer.png') no-repeat;
+      background-size: 100px 100px;
+      height: 100px;
+      width: 100px;
+      left: 20px;
+      top: -78px;
+    }
+  }
+
+  &__title {
+    @include title-2;
+
+    margin: 0 0 30px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__stack {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    &--part {
+      @include text-technology;
+
+      flex: 1;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background-color: transparent;
+      color: $color-text;
+      border: 1px solid $color-text;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--part {
+      @include text-normal;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+
+  &__border {
+    width: 1px;
+    background-color: $color-border;
+  }
+}

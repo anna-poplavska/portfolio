@@ -1,0 +1,18 @@
+{
+    "github": {
+      "title": "GitHub Icon",
+      "path": "/images/icons/icon-github.png"
+    },
+    "linkedin": {
+      "title": "LinkedIn Icon",
+      "path": "/images/icons/icon-linkedin.png"
+    },
+    "download": {
+      "title": "Download Icon",
+      "path": "/images/icons/icon-download.png"
+    },
+    "link": {
+      "title": "Link Icon",
+      "path": "/images/icons/icon-link.png"
+    }
+}
