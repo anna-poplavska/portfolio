@@ -1,6 +1,126 @@
-@import '../../../styles/main.scss';
+@import "../../../styles/main.scss";
 
 .home {
-    flex: 1;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
+  @include on-tablet {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  @include on-desktop {
+    gap: 100px;
+  }
+
+  &__info {
+    order: 2;
+
+    @include on-tablet {
+      order: 1;
+    }
+  }
+
+  &__title {
+    @include title-1;
+
+    text-align: center;
+    margin: 0 0 16px;
+
+    @include on-tablet {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__description {
+    @include text-normal;
+
+    text-align: justify;
+
+    margin: 0 0 16px;
+
+    @include on-tablet {
+      margin-bottom: 28px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__cv {
+    @include text-link;
+
+    width: fit-content;
+    margin: 0;
+    color: var(--link-color);
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    &--box {
+      justify-self: center;
+      align-self: center;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      width: 200px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      overflow: hidden;
+
+      @include on-tablet {
+        width: 300px;
+      }
+
+      @include on-desktop {
+        width: 400px;
+      }
+    }
+
+    &--effect {
+      --effect-size: 45px;
+      order: 1;
+      position: relative;
+
+      @include on-tablet {
+        --effect-size: 70px;
+
+        order: 2;
+      }
+
+      @include on-desktop {
+        --effect-size: 90px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: url("images/icons/icon-sparkles.png") no-repeat;
+        background-size: var(--effect-size) var(--effect-size);
+        height: var(--effect-size);
+        width: var(--effect-size);
+        right: calc(var(--effect-size) / 5);
+        top: calc(var(--effect-size) / 5);
+        // right: 20px;
+        // top: 20px;
+      }
+    }
+  }
+}

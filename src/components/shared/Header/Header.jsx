@@ -1,41 +1,42 @@
-import { Link } from "react-router-dom";
 import "./Header.scss";
 import { useContext } from "react";
-import { LangContext } from "../../../context/LangContext";
-import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../../context/GlobalContext";
+import { Breadcrumbs } from "../Breadcrumbs/Breadcrumbs";
+import classNames from "classnames";
 
 export const Header = () => {
-  const { text, lang, changeLang } = useContext(LangContext);
+  let navigate = useNavigate();
+  const { text, lang, changeLang, darkTheme, toggleTheme } =
+    useContext(GlobalContext);
 
   const handleLangChange = () => {
-    const newLang = lang === "en" ? "fr" : "en";
-    changeLang(newLang);
+    changeLang();
   };
 
   return (
     <header className="header">
-      <Link to="/" className="header__logo">
-        <img  className="header__logo--image" src="./images/icons/icon-girl-with-laptop.png" alt="Image girl with laptop" />
-        annaPoplavska
-      </Link>
-
-      <ul className="header__nav">
-        {text.navigation.map((navLink) => {
-          return (
-            <li className="header__nav--item" key={navLink.title}>
-              <HashLink to={`/${navLink.path}`} className="header__nav--link">
-                {navLink.title}
-              </HashLink>
+      <Breadcrumbs />
+        <ul className="header__navigation">
+          {text.navigation.map((textNav) => (
+            <li
+              className="header__link"
+              onClick={() => navigate(textNav.path)}
+              key={textNav.title}
+            >
+              {textNav.title}
             </li>
-          );
-        })}
-
-        <li className="header__nav--item">
-          <div className="header__nav--lang" onClick={handleLangChange}>
+          ))}
+          <li className="header__lang" onClick={handleLangChange}>
             {lang === "en" ? "français" : "english"}
-          </div>
-        </li>
-      </ul>
+          </li>
+          <li
+            className={classNames("header__theme-switcher", {
+              "header__theme-switcher--dark": darkTheme,
+            })}
+            onClick={toggleTheme}
+          ></li>
+        </ul>
     </header>
   );
 };

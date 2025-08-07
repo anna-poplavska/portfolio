@@ -1,0 +1,31 @@
+@import "../../../styles/main.scss";
+
+.projects {
+  &__title {
+    @include title-2;
+
+  }
+
+  &__info {
+    @include text-normal;
+  }
+
+  &__list {
+    margin: 32px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &--link {
+        @include text-link;
+
+        color: var(--link-color);
+    }
+  }
+
+  &__contact {
+    @include text-normal;
+  }
+}

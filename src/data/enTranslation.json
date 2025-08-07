@@ -1,77 +1,59 @@
 {
   "navigation": [
     {
-      "title": "#home",
-      "path": "#home"
+      "title": "home",
+      "path": "/"
     },
     {
-      "title": "#about",
-      "path": "#about"
+      "title": "about",
+      "path": "/about"
     },
     {
-      "title": "#projects",
-      "path": "#projects"
-    },
-    {
-      "title": "#contact",
-      "path": "#contact"
+      "title": "projects",
+      "path": "/projects"
     }
   ],
   "cv": {
     "button": "download cv",
     "path": "cv/cv-anna-poplavska-en.pdf"
   },
-  "presentation": {
+  "home": {
     "title": "Hi! My name is Anna.",
-    "description": "I am a passionate web developer based in Strasbourg. I love building modern, responsive, and user-focused web applications."
+    "description": "I'm a Full Stack Developer from Ukraine, currently based in France. I'm passionate about web developing. I grow every day and enjoy creating interesting projects."
   },
-  "stack": {
+  "about": {
     "title": "About me",
     "description": [
       "Currently open to job offers.",
       "I graduated with a Master’s degree in Computer Science from the National Aviation University in Kyiv (2023).",
-      "During my studies, I explored object-oriented programming, software architecture, algorithm design, and database systems — including design, management, and administration."
-    ],
-    "tech": [
-      "HTML5",
-      "CSS3 (Sass)",
-      "JavaScript",
-      "TypeScript",
-      "Java",
-      "SQL",
-      "React.js",
-      "Redux",
-      "Node.js",
-      "Version control",
-      "Git",
-      "GitHub",
-      "API Rest",
-      "Front-end development",
-      "Responsive web design",
-      "Algorithms"
+      "During my studies, I explored object-oriented programming, software architecture, algorithm design, and database systems — including design, management, and administration.",
+      "Right now, I mainly work on personal and freelance projects."
     ]
   },
   "projects": {
     "title": "Projects",
-    "year": "Year",
-    "client": "Client",
+    "description": {
+      "top": "Here are a few of my favorite projects. I enjoy working on different types of websites — every project helps me grow as a developer.",
+      "bottom": "Have a project in mind? Feel free to email me — I’d love to hear from you!"
+    },
     "repo": "Open repo",
     "website": "Open project",
     "list": [
       {
         "id": "game-2048",
         "title": "2048 game clone",
-        "year": "2025",
         "client": "Personal project",
+        "technologies": ["HTML", "CSS", "JavaScript"],
         "repo": "https://github.com/anna-poplavska/js_2048_game",
         "website": "https://anna-poplavska.github.io/js_2048_game/",
+        "image": "/images/projects/game-2048/image1.png",
         "description": "This is a full clone of the original 2048 game, built from scratch using JavaScript. I implemented the entire game logic: tile movements, number merging, scoring system, and game-over detection. The game is controlled via keyboard inputs. This project allowed me to improve my skills in DOM manipulation, event handling, and game algorithm logic."
       },
       {
-        "id": "product-store",
+        "id": "online-tech-store",
         "title": "Online tech store",
-        "year": "2025",
         "client": "Personal project",
+        "technologies": ["TypeScript", "React", "Sass"],
         "repo": "https://github.com/anna-poplavska/react_phone-catalog",
         "website": "https://anna-poplavska.github.io/react_phone-catalog/",
         "description": "This is the front-end of a commercial site built with React and TypeScript. It includes a dynamic product catalog, filtering, a favorites system, a shopping cart, search functionality, pagination, and responsive layout. I also integrated external APIs to fetch product data. This project helped me improve my skills in component-based architecture, state management, and API interaction."

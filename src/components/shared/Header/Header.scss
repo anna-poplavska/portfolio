@@ -1,63 +1,84 @@
 @import "../../../styles/main.scss";
 
 .header {
-  box-sizing: border-box;
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  margin: 0;
-  padding: 0 60px;
-  min-height: $min-height-header-footer;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $color-border;
-  background-color: $color-background-accent;
-  backdrop-filter: blur(10px);
 
-  &__logo {
-    @include text-logo;
-
-    cursor: pointer;
+  &__navigation {
+    margin: 0;
+    padding: 0 0 0 10px;
     display: flex;
+    align-items: end;
+    flex-direction: column;
     gap: 8px;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    color: $color-text;
-    text-decoration: none;
-    transition: color $animation-timing $animation-rule;
+    list-style-type: none;
 
-    &--image {
-      height: 100%;
+    @include on-tablet {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    @include on-desktop {
+       gap: 16px;
     }
   }
 
-  &__nav {
-    display: flex;
-    gap: 32px;
-    align-items: center;
+  &__link {
+    @include text-header-footer;
+
+    cursor: pointer;
     margin: 0;
+    color: var(--nav-color);
 
-    list-style: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-    &--item {
-      text-decoration: none;
-      cursor: pointer;
+  &__lang {
+    @include text-header-footer;
+
+    cursor: pointer;
+    margin: 0;
+    color: var(--link-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__theme-switcher {
+    --switcher-width: 50px;
+    --switcher-height: 25px;
+    box-sizing: border-box;
+    height: var(--switcher-height);
+    width: var(--switcher-width);
+    border-radius: calc(var(--switcher-height) / 2);
+    background-color: var(--text-color);
+    padding: 3px;
+
+    @include on-desktop {
+      --switcher-width: 60px;
+    --switcher-height: 30px;
     }
 
-    &--link {
-      @include text-nav;
-
+    &::after {
+      content: "";
       display: block;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: var(--background-color);
 
-      color: $color-nav;
+      transition: transform $animation-timing $animation-rule;
     }
 
-    &--lang {
-      @include text-nav;
-
-      color: $color-link;
+    &--dark:after {
+      transform: translateX(
+        calc(var(--switcher-width) - var(--switcher-height))
+      );
     }
   }
 }

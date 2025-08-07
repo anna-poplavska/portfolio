@@ -1,7 +1,7 @@
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback, useContext } from "react";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 export const ClickSpark = ({
-  sparkColor = "#fff",
   sparkSize = 10,
   sparkRadius = 15,
   sparkCount = 8,
@@ -10,6 +10,8 @@ export const ClickSpark = ({
   extraScale = 1.0,
   children,
 }) => {
+  const { darkTheme } = useContext(GlobalContext);
+  const sparkColor = darkTheme ? "#f8f5ee" : "#2f2f2f";
   const canvasRef = useRef(null);
   const sparksRef = useRef([]);
   const startTimeRef = useRef(null);
@@ -60,7 +62,7 @@ export const ClickSpark = ({
           return t * (2 - t);
       }
     },
-    [easing],
+    [easing]
   );
 
   useEffect(() => {
@@ -143,6 +145,7 @@ export const ClickSpark = ({
     <div
       style={{
         position: "relative",
+        height: "100%",
       }}
       onClick={handleClick}
     >

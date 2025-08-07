@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 import "./Particles.css";
 
@@ -20,41 +21,6 @@ const hexToRgb = (hex) => {
   return [r, g, b];
 };
 
-// const vertex = /* glsl */ `
-//   attribute vec3 position;
-//   attribute vec4 random;
-//   attribute vec3 color;
-
-//   uniform mat4 modelMatrix;
-//   uniform mat4 viewMatrix;
-//   uniform mat4 projectionMatrix;
-//   uniform float uTime;
-//   uniform float uSpread;
-//   uniform float uBaseSize;
-//   uniform float uSizeRandomness;
-
-//   varying vec4 vRandom;
-//   varying vec3 vColor;
-
-//   void main() {
-//     vRandom = random;
-//     vColor = color;
-
-//     vec3 pos = position * uSpread;
-//     pos.z *= 10.0;
-
-//     vec4 mPos = modelMatrix * vec4(pos, 1.0);
-//     float t = uTime;
-//     mPos.x += sin(t * random.z + 6.28 * random.w) * mix(0.1, 1.5, random.x);
-//     mPos.y += sin(t * random.y + 6.28 * random.x) * mix(0.1, 1.5, random.w);
-//     mPos.z += sin(t * random.w + 6.28 * random.y) * mix(0.1, 1.5, random.z);
-
-//     vec4 mvPos = viewMatrix * mPos;
-//     gl_PointSize = (uBaseSize * (1.0 + uSizeRandomness * (random.x - 0.5))) / length(mvPos.xyz);
-//     gl_Position = projectionMatrix * mvPos;
-//   }
-// `;
-
 const vertex = /* glsl */ `
   attribute vec3 position;
   attribute vec4 random;
@@ -67,7 +33,7 @@ const vertex = /* glsl */ `
   uniform float uSpread;
   uniform float uBaseSize;
   uniform float uSizeRandomness;
-  
+
   varying vec4 vRandom;
 varying vec3 vColor;
   
@@ -118,7 +84,6 @@ export const Particles = ({
   particleCount = 300,
   particleSpread = 10,
   speed = 0.1,
-  particleColors = ["#fbf8ef", "#fd9648", "#c1edfb"],
   moveParticlesOnHover = false,
   particleHoverFactor = 1,
   alphaParticles = false,
@@ -128,8 +93,11 @@ export const Particles = ({
   disableRotation = false,
   className,
 }) => {
+  const { darkTheme } = useContext(GlobalContext);
+  const particleColors = darkTheme ? ["#f8f5ee", "#ffe19b", "#e67630"] : ["#52a7d1", "#D5451B"];
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
+
 
   useEffect(() => {
     const container = containerRef.current;
@@ -265,6 +233,7 @@ export const Particles = ({
     sizeRandomness,
     cameraDistance,
     disableRotation,
+    darkTheme
   ]);
 
   return (

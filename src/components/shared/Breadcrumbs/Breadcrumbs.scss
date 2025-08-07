@@ -1,0 +1,47 @@
+@import "../../../styles/main.scss";
+
+.breadcrumbs {
+  &__container {
+    @include text-header-footer;
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-color);
+
+    @include on-tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+    }
+
+    &--part {
+      display: flex;
+    }
+  }
+
+  &__link {
+    @include text-header-footer;
+
+    cursor: pointer;
+    margin: 0;
+    color: var(--nav-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__navigation {
+    position: relative;
+  }
+
+  &__slash {
+    @include text-header-footer;
+
+    margin: 0;
+    color: var(--text-color);
+  }
+}

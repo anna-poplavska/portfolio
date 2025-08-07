@@ -1,56 +1,62 @@
 @import "../../../styles/main.scss";
 
 .footer {
-  box-sizing: border-box;
-  z-index: 10;
-  margin: 0;
-  padding: 0 60px;
-  min-height: $min-height-header-footer;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid $color-border;
-  background-color: $color-background-accent;
-  backdrop-filter: blur(20px);
 
   &__license {
-    @include text-nav;
+    @include text-header-footer;
+
+    text-align: left;
+    margin: 0;
+    color: var(--text-color);
   }
 
   &__nav {
     padding: 0;
     display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    align-items: end;
     margin: 0;
 
     list-style: none;
 
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
     &--item {
       text-decoration: none;
       cursor: pointer;
+      text-align: end;
     }
 
     &--link {
-      @include text-nav;
+      @include text-header-footer;
 
-      display: block;
-      color: $color-nav;
+      margin: 0;
+      color: var(--nav-color);
 
       &:hover {
-        color: $color-nav-hover;
+        text-decoration: underline;
       }
     }
 
     &--mail {
-      @include text-nav;
+      @include text-header-footer;
 
-      display: block;
-      color: $color-link;
+      overflow-wrap: anywhere;
+      margin: 0;
+      color: var(--link-color);
 
       &:hover {
-        color: $color-link-hover;
+        text-decoration: underline;
       }
     }
   }

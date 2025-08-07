@@ -1,9 +1,9 @@
 import "./About.scss";
 import { useContext } from "react";
-import { LangContext } from "../../../context/LangContext";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 export const About = () => {
-  const { text } = useContext(LangContext);
+  const { text } = useContext(GlobalContext);
 
   return (
     <section id="about" className="about">

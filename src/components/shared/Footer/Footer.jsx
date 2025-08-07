@@ -22,7 +22,6 @@ export const Footer = () => {
   return (
     <footer id="contact" className="footer">
       <p className="footer__license">© 2025 Anna Poplavska</p>
-
       <ul className="footer__nav">
         {linksFooter.map((linkFooter) => {
           return (

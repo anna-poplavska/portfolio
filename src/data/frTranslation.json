@@ -1,16 +1,63 @@
 {
   "navigation": [
     {
-      "title": "À propos",
-      "path": "#about"
+      "title": "accueil",
+      "path": "/"
     },
     {
-      "title": "Projets",
-      "path": "#projects"
+      "title": "à propos",
+      "path": "/about"
     },
     {
-      "title": "Contact",
-      "path": "#contact"
+      "title": "projets",
+      "path": "/projects"
     }
-  ]
+  ],
+  "cv": {
+    "button": "télécharger le cv",
+    "path": "cv/cv-anna-poplavska-fr.pdf"
+  },
+  "home": {
+    "title": "Coucou! Je m'appelle Anna.",
+    "description": "Je suis développeuse Full Stack originaire d’Ukraine, actuellement basée en France. Je suis passionnée par le développement web. J’apprends chaque jour et j’aime créer des projets intéressants."
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": [
+      "Actuellement ouverte aux offres d’emploi.",
+      "J’ai obtenu un master en informatique à l’Université nationale de l’aviation de Kyiv (2023).",
+      "Pendant mes études, j’ai exploré la programmation orientée objet, l’architecture logicielle, la conception d’algorithmes et les systèmes de bases de données — y compris leur conception, gestion et administration.",
+      "En ce moment, je travaille sur des projets personnels et en freelance."
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "description": {
+      "top": "Voici quelques-uns de mes projets préférés. J’aime travailler sur différents types de sites web — chaque projet m’aide à évoluer en tant que développeuse.",
+      "bottom": "Vous avez un projet en tête ? N’hésitez pas à m’écrire — je serai ravie d’en discuter !"
+    },
+    "repo": "Voir le repo",
+    "website": "Voir le projet",
+    "list": [
+      {
+        "id": "game-2048",
+        "title": "Clone du jeu 2048",
+        "client": "Projet personnel",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "repo": "https://github.com/anna-poplavska/js_2048_game",
+        "website": "https://anna-poplavska.github.io/js_2048_game/",
+        "image": "/images/projects/game-2048/image1.png",
+        "description": "Il s'agit d’un clone complet du jeu 2048 original, développé entièrement en JavaScript. J’ai implémenté toute la logique du jeu : déplacements des tuiles, fusion des chiffres, système de score et détection de fin de partie. Le jeu se contrôle via le clavier. Ce projet m’a permis d’améliorer mes compétences en manipulation du DOM, gestion des événements et logique algorithmique."
+      },
+      {
+        "id": "online-tech-store",
+        "title": "Boutique tech en ligne",
+        "client": "Projet personnel",
+        "technologies": ["TypeScript", "React", "Sass"],
+        "repo": "https://github.com/anna-poplavska/react_phone-catalog",
+        "website": "https://anna-poplavska.github.io/react_phone-catalog/",
+        "description": "Il s'agit du front-end d’un site commercial développé avec React et TypeScript. Il comprend un catalogue de produits dynamique, des filtres, un système de favoris, un panier, une recherche, une pagination et un design responsive. J’ai aussi intégré des API externes pour récupérer les données produits. Ce projet m’a aidée à perfectionner mes compétences en architecture orientée composants, gestion d’état et intégration d’API."
+      }
+    ]
+  }
 }

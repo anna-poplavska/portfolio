@@ -1,0 +1,105 @@
+@import "../../../styles/main.scss";
+
+.about {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include title-2;
+  }
+
+  &__container {
+    padding: 0 20px 0 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @include on-tablet {
+      gap: 40px;
+    }
+
+    @include on-desktop {
+      padding: 0;
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include on-tablet {
+      gap: 16px;
+    }
+
+    @include on-desktop {
+      gap: 24px;
+    }
+
+    &--text {
+      @include text-normal;
+    }
+  }
+
+  &__stack {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &--technologies {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &--title {
+      @include title-3;
+    }
+
+    &--list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--item {
+      margin: 0;
+      padding: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    &--text {
+      @include text-technology;
+    }
+
+    &--icon {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      &-box {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+    }
+  }
+}
