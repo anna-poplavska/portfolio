@@ -19,7 +19,7 @@
   },
   "home": {
     "title": "Hi! My name is Anna.",
-    "description": "I'm a Full Stack Developer from Ukraine, currently based in France. I'm passionate about web developing. I grow every day and enjoy creating interesting projects."
+    "description": "I'm a Full Stack Developer from Ukraine, currently based in France. I'm passionate about web development. I learn every day and enjoy creating interesting projects."
   },
   "about": {
     "title": "About me",
@@ -43,20 +43,21 @@
         "id": "game-2048",
         "title": "2048 game clone",
         "client": "Personal project",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "repo": "https://github.com/anna-poplavska/js_2048_game",
-        "website": "https://anna-poplavska.github.io/js_2048_game/",
+        "technologies": ["HTML", "Sass", "JavaScript"],
+        "repo": "https://github.com/anna-poplavska/game-2048",
+        "website": "https://anna-poplavska.github.io/game-2048/",
         "image": "/images/projects/game-2048/image1.png",
-        "description": "This is a full clone of the original 2048 game, built from scratch using JavaScript. I implemented the entire game logic: tile movements, number merging, scoring system, and game-over detection. The game is controlled via keyboard inputs. This project allowed me to improve my skills in DOM manipulation, event handling, and game algorithm logic."
+        "description": "This is a clone of the original 2048 game, built from scratch using JavaScript. I implemented the entire game logic: tile movements, number merging, scoring system, and game-over detection. The game is controlled via keyboard inputs. This project allowed me to improve my skills in DOM manipulation, event handling, and game algorithm logic."
       },
       {
         "id": "online-tech-store",
         "title": "Online tech store",
         "client": "Personal project",
         "technologies": ["TypeScript", "React", "Sass"],
-        "repo": "https://github.com/anna-poplavska/react_phone-catalog",
-        "website": "https://anna-poplavska.github.io/react_phone-catalog/",
-        "description": "This is the front-end of a commercial site built with React and TypeScript. It includes a dynamic product catalog, filtering, a favorites system, a shopping cart, search functionality, pagination, and responsive layout. I also integrated external APIs to fetch product data. This project helped me improve my skills in component-based architecture, state management, and API interaction."
+        "repo": "https://github.com/anna-poplavska/online-tech-store",
+        "website": "https://anna-poplavska.github.io/online-tech-store/",
+        "image": "/images/projects/online-tech-store/image1.png",
+        "description": "This is the front-end of a commercial site built with React and TypeScript. It includes a dynamic product catalog, filtering, a list of favorite products, a shopping cart, search functionality, pagination, and responsive layout. I also used external APIs to fetch product data. This project helped me improve my skills in component-based architecture, state management, and API interaction."
       }
     ]
   }

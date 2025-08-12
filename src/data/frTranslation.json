@@ -56,7 +56,7 @@
         "technologies": ["TypeScript", "React", "Sass"],
         "repo": "https://github.com/anna-poplavska/react_phone-catalog",
         "website": "https://anna-poplavska.github.io/react_phone-catalog/",
-        "description": "Il s'agit du front-end d’un site commercial développé avec React et TypeScript. Il comprend un catalogue de produits dynamique, des filtres, un système de favoris, un panier, une recherche, une pagination et un design responsive. J’ai aussi intégré des API externes pour récupérer les données produits. Ce projet m’a aidée à perfectionner mes compétences en architecture orientée composants, gestion d’état et intégration d’API."
+        "description": "Il s'agit du front-end d’un site commercial développé avec React et TypeScript. Il comprend un catalogue de produits dynamique, des filtres, un système de favoris, un panier, une recherche, une pagination et un design responsive. J’ai aussi fait des appels sur des API externes pour récupérer les données produits. Ce projet m’a aidée à perfectionner mes compétences en architecture orientée composants, gestion d’état et intégration d’API."
       }
     ]
   }

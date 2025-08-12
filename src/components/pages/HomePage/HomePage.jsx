@@ -9,7 +9,7 @@ export const HomePage = () => {
       <section className="home__info">
         <h1 className="home__title">{text.home.title}</h1>
         <p className="home__description">{text.home.description}</p>
-        <a className="home__cv" href={text.cv.path} download>
+        <a className="home__cv" href={text.cv.path} target="_blank">
           {text.cv.button}
         </a>
       </section>
