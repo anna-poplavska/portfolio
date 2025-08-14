@@ -18,8 +18,8 @@
     "path": "cv/cv-anna-poplavska-en.pdf"
   },
   "home": {
-    "title": "Hi! My name is Anna.",
-    "description": "I'm a Full Stack Developer from Ukraine, currently based in France. I'm passionate about web development. I learn every day and enjoy creating interesting projects."
+    "title": "Hi! My name is Anna✌️",
+    "description": "I'm a Software Engineer from Ukraine, currently based in France. I'm passionate about web development. I learn every day and enjoy creating interesting projects."
   },
   "about": {
     "title": "About me",
@@ -46,7 +46,7 @@
         "technologies": ["HTML", "Sass", "JavaScript"],
         "repo": "https://github.com/anna-poplavska/game-2048",
         "website": "https://anna-poplavska.github.io/game-2048/",
-        "image": "/images/projects/game-2048/image1.png",
+        "image": "images/projects/game-2048/image1.png",
         "description": "This is a clone of the original 2048 game, built from scratch using JavaScript. I implemented the entire game logic: tile movements, number merging, scoring system, and game-over detection. The game is controlled via keyboard inputs. This project allowed me to improve my skills in DOM manipulation, event handling, and game algorithm logic."
       },
       {
@@ -56,7 +56,7 @@
         "technologies": ["TypeScript", "React", "Sass"],
         "repo": "https://github.com/anna-poplavska/online-tech-store",
         "website": "https://anna-poplavska.github.io/online-tech-store/",
-        "image": "/images/projects/online-tech-store/image1.png",
+        "image": "images/projects/online-tech-store/image1.png",
         "description": "This is the front-end of a commercial site built with React and TypeScript. It includes a dynamic product catalog, filtering, a list of favorite products, a shopping cart, search functionality, pagination, and responsive layout. I also used external APIs to fetch product data. This project helped me improve my skills in component-based architecture, state management, and API interaction."
       }
     ]

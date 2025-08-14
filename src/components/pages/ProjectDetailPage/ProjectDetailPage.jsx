@@ -29,7 +29,6 @@ export const ProjectDetailPage = () => {
             {text.projects.repo}
           </a>
         )}
-        {currentProject.repo && currentProject.website && " — "}
         {currentProject.website && (
           <a className="project-detail__link" href={currentProject.website}>
             {text.projects.website}

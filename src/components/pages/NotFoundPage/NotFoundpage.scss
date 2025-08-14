@@ -1,0 +1,7 @@
+@import "../../../styles/main.scss";
+
+.not-found {
+  &__title {
+    @include title-2;
+  }
+}

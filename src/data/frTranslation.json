@@ -18,8 +18,8 @@
     "path": "cv/cv-anna-poplavska-fr.pdf"
   },
   "home": {
-    "title": "Coucou! Je m'appelle Anna.",
-    "description": "Je suis développeuse Full Stack originaire d’Ukraine, actuellement basée en France. Je suis passionnée par le développement web. J’apprends chaque jour et j’aime créer des projets intéressants."
+    "title": "Coucou! Je m'appelle Anna✌️",
+    "description": "Je suis développeuse logiciel originaire d’Ukraine, actuellement basée en France. Je suis passionnée par le développement web. J’apprends chaque jour et j’aime créer des projets intéressants."
   },
   "about": {
     "title": "À propos de moi",
@@ -46,7 +46,7 @@
         "technologies": ["HTML", "CSS", "JavaScript"],
         "repo": "https://github.com/anna-poplavska/js_2048_game",
         "website": "https://anna-poplavska.github.io/js_2048_game/",
-        "image": "/images/projects/game-2048/image1.png",
+        "image": "images/projects/game-2048/image1.png",
         "description": "Il s'agit d’un clone complet du jeu 2048 original, développé entièrement en JavaScript. J’ai implémenté toute la logique du jeu : déplacements des tuiles, fusion des chiffres, système de score et détection de fin de partie. Le jeu se contrôle via le clavier. Ce projet m’a permis d’améliorer mes compétences en manipulation du DOM, gestion des événements et logique algorithmique."
       },
       {
@@ -56,6 +56,7 @@
         "technologies": ["TypeScript", "React", "Sass"],
         "repo": "https://github.com/anna-poplavska/react_phone-catalog",
         "website": "https://anna-poplavska.github.io/react_phone-catalog/",
+        "image": "images/projects/online-tech-store/image1.png",
         "description": "Il s'agit du front-end d’un site commercial développé avec React et TypeScript. Il comprend un catalogue de produits dynamique, des filtres, un système de favoris, un panier, une recherche, une pagination et un design responsive. J’ai aussi fait des appels sur des API externes pour récupérer les données produits. Ce projet m’a aidée à perfectionner mes compétences en architecture orientée composants, gestion d’état et intégration d’API."
       }
     ]

@@ -59,11 +59,13 @@
   }
 
   &__cv {
-    @include text-link;
+    @include button;
 
-    width: fit-content;
-    margin: 0;
-    color: var(--link-color);
+    justify-self: center;
+
+    @include on-tablet {
+      justify-self: auto;
+    }
   }
 
   &__image {
@@ -110,16 +112,15 @@
 
       &::after {
         position: absolute;
-        content: "";
-        display: block;
-        background: url("images/icons/icon-sparkles.png") no-repeat;
-        background-size: var(--effect-size) var(--effect-size);
+        content: "✨";
+        font-size: var(--effect-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: var(--effect-size);
         width: var(--effect-size);
-        right: calc(var(--effect-size) / 5);
-        top: calc(var(--effect-size) / 5);
-        // right: 20px;
-        // top: 20px;
+        right: calc(var(--effect-size) / 6);
+        top: calc(var(--effect-size) / 6);
       }
     }
   }

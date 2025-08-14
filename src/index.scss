@@ -6,7 +6,8 @@ html[data-theme="dark"] {
   --title-color: #f8f5ee;
   --text-color: #dad2c1;
   --nav-color: #ffe19b;
-  --link-color: #e67630;
+  --nav-accent-color: #e67630;
+  --link-color: #ffe19b;
   --technology-color: #f8f5ee;
   --border-color: #f8f5ee;
 }
@@ -17,7 +18,8 @@ html[data-theme="light"] {
   --title-color: #2f2f2f;
   --text-color: #5a5a5a;
   --nav-color: #608594;
-  --link-color: #c0571f;
+  --nav-accent-color: #c0571f;
+  --link-color: #608594;
   --border-color: #5a5a5a;
 }
 

@@ -11,10 +11,11 @@
   }
 
   &__links {
-    @include text-link;
+    // @include text-normal;
 
+    display: flex;
+    gap: 16px;
     margin: 0 0 16px;
-    color: var(--text-color);
 
     @include on-desktop {
         margin: 0 0 20px;
@@ -26,9 +27,7 @@
   }
 
   &__link {
-    @include text-link;
-
-    color: var(--link-color);
+    @include button
   }
 
   &__container {
@@ -66,6 +65,7 @@
 
     @include on-desktop {
         margin: 0 0 20px;
+        gap: 16px;
     }
   }
 
@@ -73,12 +73,12 @@
     @include text-technology;
 
     margin: 0;
-    padding: 8px;
+    padding: 8px 16px;
     display: flex;
     gap: 8px;
     align-items: center;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 50px;
   }
 
   &__text {

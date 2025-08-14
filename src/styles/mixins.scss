@@ -73,7 +73,7 @@
   }
 
   @include on-desktop {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 
@@ -155,20 +155,59 @@
   letter-spacing: normal;
   text-decoration: none;
 
-  @include on-desktop{
+  @include on-desktop {
     font-size: 20px;
   }
 }
 
-@mixin text-link {
-  font-family: "Courier Prime", monospace;
-  font-size: 18px;
-  font-weight: 400;
+@mixin button {
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
   text-decoration: none;
+  text-transform: uppercase;
 
-  @include on-desktop{
+  color: var(--background-color);
+  background-color: var(--text-color);
+
+  transition: all $animation-rule $animation-timing;
+
+  @include on-desktop {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: var(--text-color);
+    background-color: transparent;
+    border-color: var(--text-color);
+  }
+}
+
+@mixin text-link {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: var(--link-color);
+
+  @include on-desktop {
     font-size: 20px;
   }
 
