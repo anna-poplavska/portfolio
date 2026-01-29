@@ -40,12 +40,24 @@
                 "icon": "images/stack/logo-node.png"
             },
             {
-                "name": "Java",
-                "icon": "images/stack/logo-java.png"
+                "name": "Express.js",
+                "icon": "images/stack/logo-express.png"
+            },
+            {
+                "name": "Sequelize",
+                "icon": "images/stack/logo-sequelize.png"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "images/stack/logo-postgresql.png"
             },
             {
                 "name": "MySQL",
                 "icon": "images/stack/logo-mysql.png"
+            },
+            {
+                "name": "Java",
+                "icon": "images/stack/logo-java.png"
             }
         ]
     },
